@@ -1,4 +1,5 @@
 import React from 'react';
+import { withFormik } from 'formik';
 import netlifyIdentity from 'netlify-identity-widget';
 export default function Protected() {
   const user = netlifyIdentity.currentUser();
@@ -12,7 +13,6 @@ export default function Protected() {
     <form data-netlify="true" hidden name="contact" netlify-honeypot="bot-field">
   <input type="text" name="username" />
   <input type="email" name="email" />
-  <input name="bot-field" type="hidden" />
 </form>
   );
 }
