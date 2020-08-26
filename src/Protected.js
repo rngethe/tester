@@ -8,5 +8,11 @@ export default function Protected() {
       <h3>Protected Page</h3>
       You are logged in as <b>{user.email}</b>
     </div>
+    
+    <form data-netlify="true" hidden name="contact" netlify-honeypot="bot-field">
+  <input type="text" name="username" />
+  <input type="email" name="email" />
+  <input name="bot-field" type="hidden" />
+</form>
   );
 }
